@@ -13,7 +13,7 @@ function CelestialObjects() {
       })
   }, [])
 
-  //a function that handles the click and toggles the texts visibility
+  //a function that handles the click and toggles the visibility of the text
   function toggleVisibilty(ObjectID) {
     setVisibility((prev) => ({
       //The prev gets the previous state that the visibilty had
