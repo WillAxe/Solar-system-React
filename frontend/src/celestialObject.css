@@ -1,0 +1,24 @@
+.object-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #0d0d0d;
+}
+
+.object-section {
+  background-color: #1e1e1e;
+  color: #f7f0f0;
+  border-radius: 12px;
+  width: 200px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.titles {
+  color: #ffffff;
+  cursor: pointer;
+}
