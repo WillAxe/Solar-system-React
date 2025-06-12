@@ -42,7 +42,7 @@ function Planet() {
                   <td>{`${planet.DistanceFromSun} AU`}</td>
                   <td>{`${planet.Mass} kg`}</td>
                   <td>{`${planet.HasRings === 0 ? "no" : "yes"}`}</td>
-                  <td> {`${planet.Moons}`}</td>
+                  <td>{`${planet.Moons}`}</td>
                 </tr>
               )}
             </tbody>

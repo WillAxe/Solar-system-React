@@ -34,6 +34,7 @@ function CelestialObjects() {
               {`${celestialObjects.ObjectName}`}
             </h2>
 
+            {/* checks if the visibility of the ID is true render the p-element */}
             {visibilty[celestialObjects.ObjectID] && (
               <p>{`Type of object: ${celestialObjects.ObjectType}`}</p>
             )}
