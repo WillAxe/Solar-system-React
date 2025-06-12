@@ -1,6 +1,7 @@
 import { useContext } from "react"
 import SomeContext from "../SomeContext"
 function FactsComponent() {
+  // Gets the moon name from the parent component via useContext
   const someValue = useContext(SomeContext)
   return (
     <>

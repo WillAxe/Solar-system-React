@@ -15,6 +15,7 @@ function Moon() {
       })
   }, [moonname])
   return (
+    //  sending the moonname as a prop with context to the factcomponent
     <>
       {moon !== null && (
         <main>

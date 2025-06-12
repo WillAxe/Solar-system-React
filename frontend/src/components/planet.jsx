@@ -1,6 +1,13 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import "../planets.css"
+import styled from "styled-components"
+
+const Note = styled.p`
+  color: #e2e7e7;
+  font-size: 17px;
+  font-weight: 500;
+`
 function Planet() {
   const { planetname } = useParams()
   const [planet, setPlanet] = useState(null)
@@ -40,7 +47,7 @@ function Planet() {
               )}
             </tbody>
           </table>
-          <p className="note">Note: 1 AU is approximately 149.6 million km</p>
+          <Note>Note: 1 AU is approximately 149.6 million km</Note>
         </section>
       </main>
     </>
