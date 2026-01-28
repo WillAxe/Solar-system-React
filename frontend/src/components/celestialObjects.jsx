@@ -5,7 +5,7 @@ function CelestialObjects() {
   const [object, setObject] = useState([])
   const [visibilty, setVisibility] = useState({})
   useEffect(() => {
-    fetch("http://localhost:3000/api/celestialobjects")
+    fetch("https://memoar.nu/api/celestialobjects")
       .then((response) => response.json())
       .then((result) => {
         console.log(result.celestialObjects)

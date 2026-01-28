@@ -12,7 +12,7 @@ function Planet() {
   const { planetname } = useParams()
   const [planet, setPlanet] = useState(null)
   useEffect(() => {
-    fetch(`http://localhost:3000/api/planets/${planetname}`)
+    fetch(`https://memoar.nu/api/planets/${planetname}`)
       .then((response) => response.json())
       .then((result) => {
         // console.log(result.planet)

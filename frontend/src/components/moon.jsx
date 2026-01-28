@@ -7,7 +7,7 @@ function Moon() {
   const { moonname } = useParams()
 
   useEffect(() => {
-    fetch(`http://localhost:3000/api/moons/${moonname}`)
+    fetch(`https://memoar.nu/api/moons/${moonname}`)
       .then((response) => response.json())
       .then((result) => {
         // console.log(result.moon[0])

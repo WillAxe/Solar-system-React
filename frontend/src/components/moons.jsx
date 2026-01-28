@@ -4,7 +4,7 @@ import LinkTo from "./linkTo"
 function Moons() {
   const [moon, setMoon] = useState([])
   useEffect(() => {
-    fetch("http://localhost:3000/api/moons")
+    fetch("https://memoar.nu/api/moons")
       .then((response) => response.json())
       .then((result) => {
         // console.log(result.moons)

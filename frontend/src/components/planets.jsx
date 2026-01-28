@@ -5,7 +5,7 @@ import LinkTo from "./linkTo"
 function Planets() {
   const [planet, setPlanet] = useState([])
   useEffect(() => {
-    fetch("http://localhost:3000/api/planets")
+    fetch("https://memoar.nu/api/planets")
       .then((response) => response.json())
       .then((result) => {
         // console.log(result)
