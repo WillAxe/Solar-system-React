@@ -12,11 +12,12 @@ function Planet() {
   const { planetname } = useParams()
   const [planet, setPlanet] = useState(null)
   useEffect(() => {
+    if (!planetname) return
     fetch(`https://memoar.nu/api/planets/${planetname}`)
       .then((response) => response.json())
       .then((result) => {
         // console.log(result.planet)
-        setPlanet(result.planet[0])
+        setPlanet(result.planet)
       })
   }, [planetname])
   return (
@@ -37,12 +38,12 @@ function Planet() {
             <tbody>
               {planet !== null && (
                 <tr className="planet-row">
-                  <td>{`${planet.PlanetName}`}</td>
-                  <td>{`${planet.PlanetType}`}</td>
-                  <td>{`${planet.DistanceFromSun} AU`}</td>
-                  <td>{`${planet.Mass} kg`}</td>
-                  <td>{`${planet.HasRings === 0 ? "no" : "yes"}`}</td>
-                  <td>{`${planet.Moons}`}</td>
+                  <td>{`${planet.planetname}`}</td>
+                  <td>{`${planet.planettype}`}</td>
+                  <td>{`${planet.distancefromsun} AU`}</td>
+                  <td>{`${planet.mass} kg`}</td>
+                  <td>{`${planet.hasrings === 0 ? "no" : "yes"}`}</td>
+                  <td>{`${planet.moons}`}</td>
                 </tr>
               )}
             </tbody>

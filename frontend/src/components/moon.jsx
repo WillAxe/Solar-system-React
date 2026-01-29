@@ -7,11 +7,12 @@ function Moon() {
   const { moonname } = useParams()
 
   useEffect(() => {
+    if (!moonname) return
     fetch(`https://memoar.nu/api/moons/${moonname}`)
       .then((response) => response.json())
       .then((result) => {
         // console.log(result.moon[0])
-        setMoon(result.moon[0])
+        setMoon(result.moon)
       })
   }, [moonname])
   return (
@@ -19,8 +20,8 @@ function Moon() {
     <>
       {moon !== null && (
         <main>
-          <h1>{`${moon.MoonName}`}</h1>
-          <SomeContext.Provider value={moon.MoonName}>
+          <h1>{`${moon.moonname}`}</h1>
+          <SomeContext.Provider value={moon.moonname}>
             <FactsComponent />
           </SomeContext.Provider>
         </main>

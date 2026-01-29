@@ -8,7 +8,7 @@ function Planets() {
     fetch("https://memoar.nu/api/planets")
       .then((response) => response.json())
       .then((result) => {
-        // console.log(result)
+        console.log(result)
         setPlanet(result.planets)
       })
   }, [])
@@ -17,12 +17,12 @@ function Planets() {
     <>
       <main className="planets-container">
         {planet.map((planet) => (
-          <section className="planet-section" key={planet.PlanetID}>
-            <h2>{`${planet.PlanetName}`}</h2>
+          <section className="planet-section" key={planet.planetid}>
+            <h2>{`${planet.planetname}`}</h2>
             <img
               className="planet-image"
-              src={`../images/${planet.PlanetName}.jpg`}
-              alt={`image of ${planet.PlanetName}`}
+              src={`Solar-system-React/images/${planet.planetname}.jpg`}
+              alt={`image of ${planet.planetname}`}
             />
             <LinkTo body={planet} bodies="planets"></LinkTo>
           </section>

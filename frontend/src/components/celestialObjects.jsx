@@ -26,17 +26,17 @@ function CelestialObjects() {
     <>
       <main className="object-container">
         {object.map((celestialObjects) => (
-          <section className="object-section" key={celestialObjects.ObjectID}>
+          <section className="object-section" key={celestialObjects.objectid}>
             <h2
               className="titles"
-              onClick={() => toggleVisibilty(celestialObjects.ObjectID)}
+              onClick={() => toggleVisibilty(celestialObjects.objectid)}
             >
-              {`${celestialObjects.ObjectName}`}
+              {`${celestialObjects.objectname}`}
             </h2>
 
             {/* checks if the visibility of the ID is true render the p-element */}
-            {visibilty[celestialObjects.ObjectID] && (
-              <p>{`Type of object: ${celestialObjects.ObjectType}`}</p>
+            {visibilty[celestialObjects.objectid] && (
+              <p>{`Type of object: ${celestialObjects.objecttype}`}</p>
             )}
           </section>
         ))}

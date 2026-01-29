@@ -17,9 +17,9 @@ function Moons() {
         <h1 className="moons-title">Moons of the Solar system</h1>
         <div className="moons-grid">
           {moon.map((moons) => (
-            <section className="moon-section" key={moons.MoonName}>
-              <h2>{`${moons.MoonName}`}</h2>
-              <h3>{`${moons.PlanetName}`}</h3>
+            <section className="moon-section" key={moons.moonname}>
+              <h2>{`${moons.moonname}`}</h2>
+              <h3>{`${moons.planetname}`}</h3>
               <LinkTo body={moons} bodies="moons"></LinkTo>
             </section>
           ))}
