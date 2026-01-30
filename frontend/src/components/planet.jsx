@@ -1,25 +1,25 @@
-import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
-import "../planets.css"
-import styled from "styled-components"
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import "../planets.css";
+import styled from "styled-components";
 
 const Note = styled.p`
   color: #e2e7e7;
   font-size: 17px;
   font-weight: 500;
-`
+`;
 function Planet() {
-  const { planetname } = useParams()
-  const [planet, setPlanet] = useState(null)
+  const { planetname } = useParams();
+  const [planet, setPlanet] = useState(null);
   useEffect(() => {
-    if (!planetname) return
+    if (!planetname) return;
     fetch(`https://memoar.nu/api/planets/${planetname}`)
       .then((response) => response.json())
       .then((result) => {
         // console.log(result.planet)
-        setPlanet(result.planet)
-      })
-  }, [planetname])
+        setPlanet(result.planet);
+      });
+  }, [planetname]);
   return (
     <>
       <main>
@@ -38,12 +38,12 @@ function Planet() {
             <tbody>
               {planet !== null && (
                 <tr className="planet-row">
-                  <td>{`${planet.planetname}`}</td>
-                  <td>{`${planet.planettype}`}</td>
-                  <td>{`${planet.distancefromsun} AU`}</td>
-                  <td>{`${planet.mass} kg`}</td>
-                  <td>{`${planet.hasrings === 0 ? "no" : "yes"}`}</td>
-                  <td>{`${planet.moons}`}</td>
+                  <td data-label="Planet">{`${planet.planetname}`}</td>
+                  <td data-label="Type of Planet">{`${planet.planettype}`}</td>
+                  <td data-label="Distance from the sun">{`${planet.distancefromsun} AU`}</td>
+                  <td data-label="Mass">{`${planet.mass} kg`}</td>
+                  <td data-label="Rings">{`${planet.hasrings === 0 ? "no" : "yes"}`}</td>
+                  <td data-label="Number of moons">{`${planet.moons}`}</td>
                 </tr>
               )}
             </tbody>
@@ -52,6 +52,6 @@ function Planet() {
         </section>
       </main>
     </>
-  )
+  );
 }
-export default Planet
+export default Planet;

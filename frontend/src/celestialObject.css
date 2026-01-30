@@ -5,6 +5,11 @@
   gap: 2rem;
   padding: 2rem;
   background-color: #0d0d0d;
+  position: relative;
+}
+
+.object-wrapper {
+  position: relative;
 }
 
 .object-section {
@@ -16,9 +21,26 @@
   text-align: center;
   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
   transition: transform 0.2s ease;
+  position: relative;
 }
 
 .titles {
   color: #ffffff;
   cursor: pointer;
+}
+
+.object-type {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #2a2a2a;
+  color: #f7f0f0;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  margin: 0;
+  white-space: nowrap;
+  font-size: 0.9rem;
 }
