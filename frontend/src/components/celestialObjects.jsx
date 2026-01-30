@@ -8,17 +8,17 @@ function CelestialObjects() {
     fetch("https://memoar.nu/api/celestialobjects")
       .then((response) => response.json())
       .then((result) => {
-        console.log(result.celestialObjects)
-        setObject(result.celestialObjects)
+        console.log(result.celestialobjects)
+        setObject(result.celestialobjects)
       })
   }, [])
 
   //a function that handles the click and toggles the visibility of the text
-  function toggleVisibilty(ObjectID) {
+  function toggleVisibilty(objectid) {
     setVisibility((prev) => ({
       //The prev gets the previous state that the visibilty had
       ...prev,
-      [ObjectID]: !prev[ObjectID],
+      [objectid]: !prev[objectid],
     }))
   }
 

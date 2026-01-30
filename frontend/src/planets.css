@@ -38,7 +38,9 @@
   margin-bottom: 1rem;
 }
 
-/* css for the single planet component */
+/* ----------------------------------------------------------------------
+css for the single planet component
+---------------------------------------------------------------------- */
 table {
   width: 90%;
   margin: 2rem auto;
@@ -48,22 +50,83 @@ table {
 }
 
 thead {
-  background-color: #f2f2f2;
-  color: #5f0d1a;
+  background-color: #1e1d1d;
+  color: #cc6008;
 }
 
 th {
   padding: 1rem;
   text-align: center;
-  border-bottom: 1px solid #dddddd;
-  border-left: 1px dotted #70654b;
+  border-bottom: 1px solid #ffee20;
+  border-left: 2px dotted #70654b;
 }
 
 td {
+  color: #0a0606;
   padding: 1rem;
   text-align: center;
-  border-bottom: 1px solid #dddddd;
-  border-left: 1px dotted #927438;
-  background-color: #e2f9f9;
+  border-bottom: 1px solid #a09d9d;
+  border-left: 2px dotted #e5b85d;
+  background-color: #707171;
   font-weight: 600;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .planets-container {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .planet-section {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .planet-image {
+    height: 10em;
+  }
+
+  /* Single planet table */
+  table {
+    width: 100%;
+    font-size: 0.85rem;
+  }
+
+  th,
+  td {
+    padding: 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  thead th {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .planets-container {
+    padding: 0.5rem;
+  }
+
+  .planet-section {
+    padding: 0.75rem;
+  }
+
+  .planet-image {
+    height: 8em;
+  }
+
+  /* Make table scrollable on very small screens */
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  th,
+  td {
+    padding: 0.4rem;
+    font-size: 0.65rem;
+  }
 }

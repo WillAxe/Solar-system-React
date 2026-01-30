@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
 import "../planets.css"
-import { Link } from "react-router-dom"
 import LinkTo from "./linkTo"
 function Planets() {
   const [planet, setPlanet] = useState([])
@@ -21,7 +20,7 @@ function Planets() {
             <h2>{`${planet.planetname}`}</h2>
             <img
               className="planet-image"
-              src={`Solar-system-React/images/${planet.planetname}.jpg`}
+              src={`Solar-system-React/../images/${planet.planetname}.jpg`}
               alt={`image of ${planet.planetname}`}
             />
             <LinkTo body={planet} bodies="planets"></LinkTo>

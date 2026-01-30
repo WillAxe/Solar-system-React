@@ -32,3 +32,44 @@ li a {
 .navbar-list :hover {
   color: #fabd2f;
 }
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .nav-bar {
+    height: auto;
+    padding: 0.5rem;
+  }
+
+  .navbar-list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  li {
+    margin: 0.5rem 1rem;
+  }
+
+  li a {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-bar {
+    padding: 0.25rem;
+  }
+
+  .navbar-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  li {
+    margin: 0.25rem 0;
+  }
+
+  li a {
+    font-size: 0.85rem;
+  }
+}
