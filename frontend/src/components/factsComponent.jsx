@@ -25,7 +25,7 @@ const factText = {
           thought that both Mercury and Venus orbited the sun, not Earth.
       
        
-        <h2>A year on Mercury is just 88 days long.</h2>
+        ${(<h2>A year on Mercury is just 88 days long.</h2>)}
      
           One solar day (the time from noon to noon on the planet’s surface) on
           Mercury lasts the equivalent of 176 Earth days while the sidereal day
@@ -36,20 +36,20 @@ const factText = {
           planets with its distance from the Sun ranging from 46 to 70 million
           km.
        
-        <h2>Mercury is the smallest planet in the Solar Systm.</h2>
+        ${(<h2>Mercury is the smallest planet in the Solar Systm.</h2>)}
         
           One of five planets visible with the naked eye a, Mercury is just
           4,879 Kilometres across its equator, compared with 12,742 Kilometres
           for the Earth.
        
-        <h2>Mercury is the second densest planet.</h2>
+        ${(<h2>Mercury is the second densest planet.</h2>)}
         
           Even though the planet is small, Mercury is very dense. Each cubic
           centimetre has a density of 5.4 grams, with only the Earth having a
           higher density. This is largely due to Mercury being composed mainly
           of heavy metals and rock.
        
-        <h2>Mercury has wrinkles.</h2>
+        ${(<h2>Mercury has wrinkles.</h2>)}
        
           As the iron core of the planet cooled and contracted, the surface of
           the planet became wrinkled. Scientist have named these wrinkles,
@@ -76,14 +76,14 @@ const factText = {
           surface.
       
       
-        <h2>A day on Venus lasts longer than a year.</h2>
+        ${(<h2>A day on Venus lasts longer than a year.</h2>)}
       
           It takes 243 Earth days to rotate once on its axis (sidereal day). The
           planet’s orbit around the Sun takes 225 Earth days, compared to the
           Earth’s 365. A day on the surface of Venus (solar day) takes 117 Earth
           days.
      
-        <h2>Venus rotates in the opposite direction to most other planets.</h2>
+        ${(<h2>Venus rotates in the opposite direction to most other planets.</h2>)}
       
           This means that Venus is rotating in the opposite direction to the
           Sun, this is also know as a retrograde rotation. A possible reason
@@ -91,14 +91,16 @@ const factText = {
           caused the planet to alter its rotational path. It also differs from
           most other planets in our solar systm by having no natural satellites.
      
-        <h2>Venus is the second brightest object in the night sky.</h2>
+        ${(<h2>Venus is the second brightest object in the night sky.</h2>)}
          
           Only the Moon is brighter. With a magnitude of between -3.8 to -4.6
           Venus is so bright it can be seen during daytime on a clear day.
       
-        <h2>
-          Atmospheric pressure on Venus is 92 times greater than the Earth’s.
-        </h2>
+        ${(
+          <h2>
+            Atmospheric pressure on Venus is 92 times greater than the Earth’s.
+          </h2>
+        )}
       
           While its size and mass are similar to Earth, the small asteroids are
           crushed when entering its atmosphere, meaning no small craters lie on
@@ -115,7 +117,7 @@ const factText = {
           than the four gas giants, Jupiter, Saturn, Uranusand Neptune, but
           larger than the three other rocky planets,
          
-        <h2>The Earth’s rotation is gradually slowing.</h2>
+        ${(<h2>The Earth’s rotation is gradually slowing.</h2>)}
          
           This deceleration is happening almost imperceptibly, at approximately
           17 milliseconds per hundred years, although the rate at which it
@@ -124,7 +126,7 @@ const factText = {
           million years before the length of a day will have increased to 25
           hours.
          
-        <h2>The Earth was once believed to be the centre of the universe.</h2>
+        ${(<h2>The Earth was once believed to be the centre of the universe.</h2>)}
          
           Due to the apparent movements of the Sun and planets in relation to
           their viewpoint, ancient scientists insisted that the Earth remained
@@ -133,13 +135,13 @@ const factText = {
           universe was postulated by Copernicus, though this is also not the
           case.
          
-        <h2>Earth has a powerful magnetic field.</h2>
+        ${(<h2>Earth has a powerful magnetic field.</h2>)}
          
           This phenomenon is caused by the nickel-iron core of the planet,
           coupled with its rapid rotation. This field protects the Earth from
           the effects of solar wind.
          
-        <h2>There is only one natural satellite of the planet Earth.</h2>
+        ${(<h2>There is only one natural satellite of the planet Earth.</h2>)}
          
           As a percentage of the size of the body it orbits, the Moon is the
           largest satellite of any planet in our solar systm. In real terms,
@@ -155,21 +157,21 @@ const factText = {
           meaning "the red one," while ancient Chinese astronomers dubbed it
           "the fire star."
 
-        <h2>Mars and Earth have approximately the same landmass.</h2>
+        ${(<h2>Mars and Earth have approximately the same landmass.</h2>)}
          
           Even though Mars has only 15% of the Earth’s volume and just over 10%
           of the Earth’s mass, around two thirds of the Earth’s surface is
           covered in water. Martian surface gravity is only 37% of the Earth’s
           (meaning you could leap nearly three times higher on Mars).
          
-        <h2>Mars is home to the tallest mountain in the solar systm.</h2>
+        ${(<h2>Mars is home to the tallest mountain in the solar systm.</h2>)}
          
           Olympus Mons, a shield volcano, is 21km high and 600km in diameter.
           Despite having formed over billions of years, evidence from volcanic
           lava flows is so recent many scientists believe it could still be
           active.
          
-        <h2>Only 18 missions to Mars have been successful.</h2>
+        ${(<h2>Only 18 missions to Mars have been successful.</h2>)}
          
           As of September 2014 there have been 40 missions to Mars, including
           orbiters, landers and rovers but not counting flybys. The most recent
@@ -181,7 +183,7 @@ const factText = {
           rover, followed by NASA’s InSight robotic lander mission, slated for
           launch in March 2016 and a planned arrival in September, 2016.
          
-        <h2>Mars has the largest dust storms in the solar systm.</h2>
+        ${(<h2>Mars has the largest dust storms in the solar systm.</h2>)}
          
           They can last for months and cover the entire planet. The seasons are
           extreme because its elliptical (oval-shaped) orbital path around the
@@ -201,15 +203,17 @@ const factText = {
           other than Earth, major support of the Copernican view that Earth was
           not the center of the universe.
          
-        <h2>Jupiter is the fourth brightest object in the solar systm.</h2>
+        ${(<h2>Jupiter is the fourth brightest object in the solar systm.</h2>)}
          
           Only the Sun, Moon and Venus are brighter. It is one of five planets
           visible to the naked eye from Earth.
          
-        <h2>
-          The ancient Babylonians were the first to record their sightings of
-          Jupiter.
-        </h2>
+        ${(
+          <h2>
+            The ancient Babylonians were the first to record their sightings of
+            Jupiter.
+          </h2>
+        )}
          
           This was around the 7th or 8th century BC. Jupiter is named after the
           king of the Roman gods. To the Greeks, it represented Zeus, the god of
@@ -217,12 +221,12 @@ const factText = {
           the city of Babylon. Germanic tribes saw this planet as Donar, or
           Thor.
          
-        <h2>Jupiter has the shortest day of all the planets.</h2>
+        ${(<h2>Jupiter has the shortest day of all the planets.</h2>)}
          
           It turns on its axis once every 9 hours and 55 minutes. The rapid
           rotation flattens the planet slightly, giving it an oblate shape.
          
-        <h2>Jupiter orbits the Sun once every 11.8 Earth years.</h2>
+        ${(<h2>Jupiter orbits the Sun once every 11.8 Earth years.</h2>)}
          
           From our point of view on Earth, it appears to move slowly in the sky,
           taking months to move from one constellation to another.
@@ -240,27 +244,29 @@ const factText = {
           the solar systm — Jupiter, Uranus and Neptune — also have rings, those
           of Saturn are without a doubt the most extraordinary.
          
-        <h2>Saturn can be seen with the naked eye.</h2>
+        ${(<h2>Saturn can be seen with the naked eye.</h2>)}
          
           It is the fifth brightest object in the solar systm and is also easily
           studied through binoculars or a small telescope.
          
-        <h2>
-          Saturn was known to the ancients, including the Babylonians and Far
-          Eastern observers.
-        </h2>
+        ${(
+          <h2>
+            Saturn was known to the ancients, including the Babylonians and Far
+            Eastern observers.
+          </h2>
+        )}
          
           It is named for the Roman god Saturnus, and was known to the Greeks as
           Cronus.
          
-        <h2>Saturn is the flattest planet.</h2>
+        ${(<h2>Saturn is the flattest planet.</h2>)}
          
           Its polar diameter is 90% of its equatorial diameter, this is due to
           its low density and fast rotation. Saturn turns on its axis once every
           10 hours and 34 minutes giving it the second-shortest day of any of
           the solar systm’s planets.
          
-        <h2>Saturn orbits the Sun once every 29.4 Earth years.</h2>
+        ${(<h2>Saturn orbits the Sun once every 29.4 Earth years.</h2>)}
          
           Its slow movement against the backdrop of stars earned it the nickname
           of “Lubadsagush” from the ancient Assyrians. The name means “oldest of
@@ -280,9 +286,11 @@ const factText = {
           "star" seemed different, and within a year Uranus was shown to follow
           a planetary orbit.
          
-        <h2>
-          Uranus was officially discovered by Sir William Herschel in 1781.
-        </h2>
+        ${(
+          <h2>
+            Uranus was officially discovered by Sir William Herschel in 1781.
+          </h2>
+        )}
          
           It is too dim to have been seen by the ancients. At first Herschel
           thought it was a comet, but several years later it was confirmed as a
@@ -290,18 +298,18 @@ const factText = {
           after King George III. The name Uranus was suggested by astronomer
           Johann Bode. The name comes from the ancient Greek deity Ouranos.
          
-        <h2>Uranus turns on its axis once every 17 hours, 14 minutes.</h2>
+        ${(<h2>Uranus turns on its axis once every 17 hours, 14 minutes.</h2>)}
          
           The planet rotates in a retrograde direction, opposite to the way
           Earth and most other planets turn.
          
-        <h2>Uranus makes one trip around the Sun every 84 Earth years.</h2>
+        ${(<h2>Uranus makes one trip around the Sun every 84 Earth years.</h2>)}
          
           During some parts of its orbit one or the other of its poles point
           directly at the Sun and get about 42 years of direct sunlight. The
           rest of the time they are in darkness.
          
-        <h2>Uranus is often referred to as an “ice giant” planet.</h2>
+        ${(<h2>Uranus is often referred to as an “ice giant” planet.</h2>)}
          
           Like the other gas giants, it has a hydrogen upper layer, which has
           helium mixed in. Below that is an icy “mantle, which surrounds a rock
@@ -328,28 +336,30 @@ const factText = {
           such as why its winds are so speedy and why its magnetic field is
           offset.
          
-        <h2>Neptune was not known to the ancients.</h2>
+        ${(<h2>Neptune was not known to the ancients.</h2>)}
          
           It is not visible to the naked eye and was first observed in 1846. Its
           position was determined using mathematical predictions. It was named
           after the Roman god of the sea.
          
-        <h2>Neptune spins on its axis very rapidly.</h2>
+        ${(<h2>Neptune spins on its axis very rapidly.</h2>)}
          
           Its equatorial clouds take 18 hours to make one rotation. This is
           because Neptune is not solid body.
          
-        <h2>Neptune is the smallest of the ice giants.</h2>
+        ${(<h2>Neptune is the smallest of the ice giants.</h2>)}
          
           Despite being smaller than Uranus, Neptune has a greater mass. Below
           its heavy atmosphere, Uranus is made of layers of hydrogen, helium,
           and methane gases. They enclose a layer of water, ammonia and methane
           ice. The inner core of the planet is made of rock.
          
-        <h2>
-          The atmosphere of Neptune is made of hydrogen and helium, with some
-          methane.
-        </h2>
+        ${(
+          <h2>
+            The atmosphere of Neptune is made of hydrogen and helium, with some
+            methane.
+          </h2>
+        )}
          
           The methane absorbs red light, which makes the planet appear a lovely
           blue. High, thin clouds drift in the upper atmosphere.
@@ -373,12 +383,12 @@ const factText = {
           expand from 8 to roughly 100.
          
         <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/asd.jpeg" />
-        <h2>Pluto is named after the Greek god of the underworld.</h2>
+        ${(<h2>Pluto is named after the Greek god of the underworld.</h2>)}
          
           This is a later name for the more well known Hades and was proposed by
           Venetia Burney an eleven year old schoolgirl from Oxford, England.
          
-        <h2>Pluto was reclassified from a planet to a dwarf planet in 2006.</h2>
+        ${(<h2>Pluto was reclassified from a planet to a dwarf planet in 2006.</h2>)}
          
           This is when the IAU formalised the definition of a planet as “A
           planet is a celestial body that (a) is in orbit around the Sun, (b)
@@ -386,15 +396,18 @@ const factText = {
           so that it assumes a hydrostatic equilibrium (nearly round) shape, and
           (c) has cleared the neighbourhood around its orbit.”
          
-        <h2>
-          Pluto was discovered on February 18th, 1930 by the Lowell Observatory.
-        </h2>
+        ${(
+          <h2>
+            Pluto was discovered on February 18th, 1930 by the Lowell
+            Observatory.
+          </h2>
+        )}
          
           For the 76 years between Pluto being discovered and the time it was
           reclassified as a dwarf planet it completed under a third of its orbit
           around the Sun.
          
-        <h2>Pluto has five known moons.</h2>
+        ${(<h2>Pluto has five known moons.</h2>)}
          
           The moons are Charon (discovered in 1978,), Hydra and Nix (both
           discovered in 2005), Kerberos originally P4 (discovered 2011) and Styx
