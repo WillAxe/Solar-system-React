@@ -6,6 +6,7 @@ import Moons from "./components/moons"
 import CelestialObjects from "./components/celestialObjects"
 import Planet from "./components/planet"
 import Moon from "./components/moon"
+import PlanetExplorer from "./components/planetExplorer"
 
 import {
   createHashRouter,
@@ -24,6 +25,7 @@ function App() {
         { element: <CelestialObjects />, path: "/celestialobjects" },
         { element: <Planet />, path: "/planets/:planetname" },
         { element: <Moon />, path: "/moons/:moonname" },
+        { element: <PlanetExplorer />, path: "/planetexplorer" },
       ],
       element: (
         <>
@@ -35,6 +37,9 @@ function App() {
               </li>
               <li>
                 <Link to="/planets">The Planets</Link>
+              </li>
+              <li>
+                <Link to="/planetexplorer">Planet Explorer</Link>
               </li>
               <li>
                 <Link to="/moons">Moons</Link>

@@ -1,0 +1,602 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700");
+
+@keyframes spin {
+  from {
+    background-position-y: 400px;
+  }
+  to {
+    background-position-y: -400px;
+  }
+}
+
+/* ===== Base ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0d0d0d;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+  transform-style: preserve-3d;
+}
+
+/* ===== Sidebar nav ===== */
+.pe-menu {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  z-index: 100;
+}
+
+.pe-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 1rem 0.5rem 0.75rem;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-left: 3px solid transparent;
+  color: rgba(255, 255, 255, 0.55);
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.78em;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  width: 165px;
+  text-align: left;
+}
+
+.pe-menu-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.pe-menu-item.active {
+  border-left-color: #fabd2f;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.pe-pip {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 0 6px currentColor;
+}
+
+.pe-menu-name {
+  font-weight: 700;
+  flex: 1;
+}
+
+.pe-menu-au {
+  font-size: 0.8em;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.4);
+  white-space: nowrap;
+}
+
+/* ===== Stage ===== */
+.pe-stage {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 90px);
+  overflow: hidden;
+  background: radial-gradient(ellipse at center, #141414 0%, #080808 100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+/* 
+A wrapper for the active planet used to apply the shadow box effect without getting affected by the planet's rotation animation */
+.pe-active-planet-wrapper {
+  position: absolute;
+  bottom: -18%;
+  left: 50%;
+  transform: translateX(-50%) translateY(30%);
+  width: 730px;
+  height: 730px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  z-index: 11;
+  transition: background-image 0.6s ease;
+}
+
+/* ===== Active planet ===== */
+.pe-active-planet {
+  position: absolute;
+  animation: spin 60s infinite linear;
+  -webkit-animation: spin 60s infinite linear;
+  bottom: 30%;
+  left: 50%;
+  transform: translateX(-50%) translateY(30%) rotatex(1deg) scaleX(1);
+  width: 730px;
+  height: 730px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  z-index: 10;
+  transition: background-image 0.6s ease;
+}
+
+/*====== Box shadows for each planet=======*/
+
+.pe-active-planet-wrapper[data-planet="mercury"] {
+  box-shadow:
+    0 -590px 250px 130px rgb(15, 15, 15) inset,
+    0 0px 130px 40px rgba(234, 205, 199, 0.932) inset,
+    0 0px 23px 40px rgba(234, 205, 199, 0.986) inset,
+    0 -15px 130px rgba(188, 143, 127, 0.781);
+}
+
+.pe-active-planet-wrapper[data-planet="venus"] {
+  box-shadow:
+    0 590px 150px,
+    0 0px 130px 40px #ffcb9c inset,
+    0 0px 23px 4px #ffcb9c inset,
+    0 10px 130px #b85a07;
+}
+
+.pe-active-planet-wrapper[data-planet="earth"] {
+  box-shadow:
+    0 -590px 150px black inset,
+    0 0px 130px 40px #8cbaff inset,
+    0 0px 23px 4px #8cbaff inset,
+    0 -10px 130px #7894a9;
+}
+
+.pe-active-planet-wrapper[data-planet="mars"] {
+  box-shadow:
+    0 -590px 150px black inset,
+    0 0px 130px 40px #e86363 inset,
+    0 0px 23px 4px #e86363 inset,
+    0 -10px 130px rgb(117, 41, 28);
+}
+
+.pe-active-planet-wrapper[data-planet="jupiter"] {
+  box-shadow:
+    0 -590px 150px black inset,
+    0 0px 130px 40px rgba(234, 205, 199, 0.6) inset,
+    0 0px 23px 4px rgba(234, 205, 199, 0.6) inset,
+    0 -10px 130px rgba(188, 143, 127, 0.6);
+}
+
+.pe-active-planet-wrapper[data-planet="saturn"] {
+  box-shadow:
+    0 -590px 150px black inset,
+    0 0px 130px 40px rgba(234, 205, 199, 0.6) inset,
+    0 0px 23px 4px rgba(234, 205, 199, 0.6) inset,
+    0 -10px 130px rgba(241, 212, 116, 0.6);
+}
+
+.pe-active-planet-wrapper[data-planet="uranus"] {
+  box-shadow:
+    0 -590px 150px black inset,
+    0 0px 130px 40px rgba(234, 205, 199, 0.6) inset,
+    0 0px 23px 4px rgba(234, 205, 199, 0.6) inset,
+    0 -10px 130px rgba(127, 188, 171, 0.9);
+}
+
+.pe-active-planet-wrapper[data-planet="neptune"] {
+  box-shadow:
+    0 -590px 150px black inset,
+    0 0px 130px 40px rgba(234, 205, 199, 0.6) inset,
+    0 0px 23px 4px rgba(110, 85, 81, 0.6) inset,
+    0 -10px 130px rgba(23, 116, 197, 0.9);
+}
+
+.pe-active-planet-wrapper[data-planet="pluto"] {
+  box-shadow:
+    0 -590px 150px black inset,
+    0 0px 130px 40px rgba(234, 205, 199, 0.6) inset,
+    0 0px 23px 4px rgba(234, 205, 199, 0.6) inset,
+    0 -10px 130px rgb(235, 189, 151, 0.8);
+}
+
+/* ===== Background planets (depth layers) ===== */
+.pe-behind {
+  position: absolute;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    filter 0.25s ease;
+  filter: brightness(0.55);
+  z-index: 1;
+}
+
+.pe-behind:hover {
+  filter: brightness(0.8);
+  transform: scale(1.06);
+}
+
+.pe-behind-1 {
+  width: 260px;
+  height: 260px;
+  bottom: 50%;
+  right: 43.6%;
+}
+
+/* ===== Description overlay on active planet ===== */
+.pe-description {
+  position: absolute;
+  bottom: 58%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 340px;
+  pointer-events: none;
+}
+
+.pe-description > * {
+  pointer-events: auto;
+}
+
+.pe-type {
+  font-size: 0.7em;
+  font-weight: 300;
+  letter-spacing: 0.25em;
+  color: rgba(255, 255, 255, 0.945);
+  margin-bottom: 0.3rem;
+}
+
+.pe-name {
+  font-size: 2.8em;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #ffffff;
+  line-height: 1;
+  margin-bottom: 0.75rem;
+}
+
+.pe-desc {
+  font-size: 0.75em;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.945);
+  line-height: 1.7;
+  margin-bottom: 1.1rem;
+  background-color: rgba(243, 243, 243, 0.363);
+}
+
+.pe-read-more {
+  display: inline-block;
+  padding: 0.5rem 1.4rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: transparent;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.72em;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.pe-read-more:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #fabd2f;
+  color: #fabd2f;
+}
+
+/* ===== Slide-in panel ===== */
+.pe-panel {
+  position: fixed;
+  top: 0;
+  right: -420px;
+  width: 400px;
+  height: 100%;
+  background: rgba(17, 17, 17, 0.541);
+  color: #f0f0f0;
+  z-index: 200;
+  overflow-y: auto;
+  transition: right 0.45s ease;
+  padding: 3.5rem 2rem 2rem;
+  box-shadow: -4px 0 30px rgba(0, 0, 0, 0.7);
+}
+
+.pe-panel.open {
+  right: 0;
+}
+
+.pe-panel h1 {
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.pe-panel img {
+  width: 100%;
+  border-radius: 8px;
+  margin: 1rem 0;
+  display: block;
+  object-fit: cover;
+}
+
+.pe-panel p,
+.pe-panel .facts-paragraph {
+  font-size: 0.85em;
+  font-weight: 300;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 1rem;
+  white-space: pre-wrap;
+}
+
+/* ===== Close button ===== */
+.pe-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.3em;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0.25rem 0.5rem;
+  transition: color 0.2s ease;
+}
+
+.pe-close:hover {
+  color: #fabd2f;
+}
+
+/* ===== Backdrop ===== */
+.pe-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 190;
+}
+
+/* ===== Hamburger button (hidden on desktop) ===== */
+.pe-hamburger {
+  display: none;
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 150;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  padding: 10px 9px;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.pe-hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+/* The lines for the hamburger menu */
+
+.pe-hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.pe-hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.pe-hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ===== Menu backdrop (mobile only) ===== */
+.pe-menu-backdrop {
+  display: none;
+}
+
+/* ===== Responsive ===== */
+
+/* ---- Tablets / small laptops ---- */
+@media (max-width: 1024px) {
+  .pe-active-planet-wrapper {
+    width: 580px;
+    height: 580px;
+  }
+
+  .pe-active-planet {
+    width: 580px;
+    height: 580px;
+  }
+
+  .pe-behind-1 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .pe-description {
+    width: 300px;
+  }
+
+  .pe-name {
+    font-size: 2.2em;
+  }
+
+  .pe-desc {
+    font-size: 0.7em;
+  }
+}
+
+/* ---- Small tablets / large phones ---- */
+@media (max-width: 768px) {
+  .pe-hamburger {
+    display: flex;
+  }
+
+  .pe-menu {
+    position: fixed;
+    top: auto;
+    bottom: 4rem;
+    left: -220px;
+    width: 200px;
+    transform: none;
+    flex-direction: column;
+    gap: 0;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 0.5rem 0;
+    border-radius: 0 8px 8px 0;
+    transition: left 0.35s ease;
+    overflow-y: auto;
+    max-height: 70vh;
+  }
+
+  .pe-menu.open {
+    left: 0;
+  }
+
+  .pe-menu-item {
+    width: 100%;
+    height: 40px;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.65rem 1rem;
+    font-size: 0.75em;
+    margin-top: 4px;
+    border-left: 3px solid transparent;
+    border-top: none;
+  }
+
+  .pe-menu-item.active {
+    border-left-color: #fabd2f;
+    border-top-color: transparent;
+  }
+
+  .pe-menu-au {
+    display: inline;
+  }
+
+  .pe-menu-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+  }
+
+  .pe-stage {
+    height: calc(100vh - 90px);
+  }
+
+  .pe-active-planet-wrapper {
+    width: 440px;
+    height: 440px;
+    bottom: -12%;
+  }
+
+  .pe-active-planet {
+    width: 440px;
+    height: 440px;
+  }
+
+  .pe-behind-1 {
+    width: 160px;
+    height: 160px;
+    bottom: 45%;
+    right: 5%;
+  }
+
+  .pe-description {
+    width: 280px;
+    bottom: 55%;
+  }
+
+  .pe-name {
+    font-size: 1.8em;
+  }
+
+  .pe-desc {
+    font-size: 0.65em;
+  }
+
+  .pe-panel {
+    width: 100%;
+    right: -100%;
+  }
+}
+
+/* ---- Phones ---- */
+@media (max-width: 480px) {
+  .pe-stage {
+    height: calc(100vh - 80px);
+  }
+
+  .pe-active-planet-wrapper {
+    width: 320px;
+    height: 320px;
+    bottom: -8%;
+  }
+
+  .pe-active-planet {
+    width: 320px;
+    height: 320px;
+  }
+
+  .pe-behind-1 {
+    width: 120px;
+    height: 120px;
+    bottom: 48%;
+    right: 3%;
+  }
+
+  .pe-description {
+    width: 240px;
+    bottom: 52%;
+  }
+
+  .pe-name {
+    font-size: 1.4em;
+    letter-spacing: 0.08em;
+  }
+
+  .pe-type {
+    font-size: 0.6em;
+  }
+
+  .pe-desc {
+    font-size: 0.6em;
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+  }
+
+  .pe-read-more {
+    font-size: 0.6em;
+    padding: 0.4rem 1rem;
+  }
+
+  .pe-panel {
+    padding: 2.5rem 1.2rem 1.5rem;
+  }
+
+  .pe-panel h1 {
+    font-size: 1.5em;
+  }
+
+  .pe-menu.open {
+    display: flex;
+    align-self: end;
+  }
+}
