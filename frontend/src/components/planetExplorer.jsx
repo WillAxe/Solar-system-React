@@ -195,7 +195,7 @@ export default function PlanetExplorer() {
           ✕
         </button>
         <h1>{activePlanet.name}</h1>
-        <img src={activePlanet.panelImg} alt={activePlanet.name} />
+        {/* <img src={activePlanet.panelImg} alt={activePlanet.name} /> */}
         <SomeContext.Provider value={activePlanet.name}>
           <FactsComponent />
         </SomeContext.Provider>
